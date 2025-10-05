@@ -12,7 +12,8 @@ namespace Bridge
 
         public override double Price()
         {
-            return 230;
+            double basePrice = 300;
+            return Brobizz ? basePrice * 0.9 : basePrice; 
         }
 
         public override string VehicleType()
