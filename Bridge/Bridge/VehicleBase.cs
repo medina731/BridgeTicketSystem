@@ -7,17 +7,39 @@ using System.Threading.Tasks;
 
 namespace Bridge
 {
+    /// <summary>
+    /// Det her er VehicleBase klassen, som er en abstrakt klasse.
+    /// Baseklassen indeholder shared properties og logik for alle vehicle typer, såsom Licenseplate, Date og Brobizz.
+    /// </summary>
     public abstract class VehicleBase
     {
+        /// <summary>
+        /// Her er Licenseplate property, som er en string.
+        /// </summary>
         public string Licenseplate { get; set; }
+        /// <summary>
+        /// Her er Date property, som er en DateTime.
+        /// </summary>
         public DateTime Date { get; set; }
+        /// <summary>
+        /// Her er Brobizz property, som er en bool.
+        /// </summary>
         public bool Brobizz {  get; set; }
-       
 
-       public abstract double Price();
+        /// <summary>
+        /// Her er Price metoden, som er en abstrakt metode.
+        /// </summary>
+        /// <returns></returns>
+        public abstract double Price();
+        /// <summary>
+        /// Her er VehicleType metoden, som er en abstrakt metode.
+        /// </summary>
+        /// <returns></returns>
         public abstract string VehicleType();
 
-
+        /// <summary>
+        /// Her er LicensePlate property med en validering, som sikrer at licenseplaten mindst er 7 karakter lang. 
+        /// </summary>
         private string _licenseplate;
         public string LicensePlate
         {
@@ -31,7 +53,11 @@ namespace Bridge
                 _licenseplate = value;
             }
         }
-
+        /// <summary>
+        /// Her er ApplyDiscountForBroBizz metoden, som tjekker om et vehicle har brobizz, og hvis det har, bliver der givet 10% rabat på prisen.
+        /// </summary>
+        /// <param name="price"> Den oprindelig pris før discount</param>
+        /// <returns> Den nedsatte pris</returns>
         protected double ApplyDiscountForBroBizz (double price)
         {
             return Brobizz ? price * 0.9 : price;

@@ -70,7 +70,9 @@ namespace BridgeTest
 
 
     }
-
+    /// <summary>
+    /// test for at fjerne 10% hvis man har brobizz, og ellers fuldpris. 
+    /// </summary>
     [TestClass]
 
     public class BroBizzTest

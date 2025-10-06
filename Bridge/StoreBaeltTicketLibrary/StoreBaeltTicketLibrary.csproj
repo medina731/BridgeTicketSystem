@@ -4,9 +4,12 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
-    <DocumentationFile></DocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Bridge">
+      <HintPath>..\..\..\BridgeTicketSystem. DLL&amp;XML\Bridge.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>
