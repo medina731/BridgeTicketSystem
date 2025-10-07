@@ -16,7 +16,7 @@ namespace Bridge
         /// <summary>
         /// Her er Licenseplate property, som er en string.
         /// </summary>
-        public string Licenseplate { get; set; }
+        public string Licenseplate { get; set; } = string.Empty;
         /// <summary>
         /// Her er Date property, som er en DateTime.
         /// </summary>
@@ -38,9 +38,12 @@ namespace Bridge
         public abstract string VehicleType();
 
         /// <summary>
-        /// Her er LicensePlate property med en validering, som sikrer at licenseplaten mindst er 7 karakter lang. 
+        /// Her er LicensePlate, som bruges af licensePLate-Property til validering og adgang.
         /// </summary>
-        private string _licenseplate;
+        private string _licenseplate = string.Empty;
+        /// <summary>
+        /// Her er min licenseplate property med en validering, som sikrer at licenseplaten mindst er 7 karakter lang.
+        /// </summary>
         public string LicensePlate
         {
             get { return _licenseplate; }
