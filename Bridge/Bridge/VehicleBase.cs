@@ -13,6 +13,8 @@ namespace Bridge
     /// </summary>
     public abstract class VehicleBase
     {
+      
+        
         /// <summary>
         /// Her er Licenseplate property, som er en string.
         /// </summary>
@@ -41,6 +43,18 @@ namespace Bridge
         /// Her er LicensePlate, som bruges af licensePLate-Property til validering og adgang.
         /// </summary>
         private string _licenseplate = string.Empty;
+
+        /// <summary>
+        /// konstruktor for vehiclebase, som kun tager 1 parameter, som er licenseplate.
+        /// </summary>
+        /// <param name="licensePlate"></param>
+        public VehicleBase(string licensePlate)
+        {
+            LicensePlate = licensePlate;
+         
+        }
+
+
         /// <summary>
         /// Her er min licenseplate property med en validering, som sikrer at licenseplaten mindst er 7 karakter lang.
         /// </summary>

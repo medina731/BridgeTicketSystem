@@ -12,6 +12,10 @@ namespace Bridge
     /// </summary>
     public class MC : VehicleBase
     {
+        public MC(string licensePlate) : base(licensePlate)
+        {
+        }
+
         /// <summary>
         /// Her er prisen for en motorcykel, som er 120 kr.Metoden skal regne prisen ud for en motorcykel.
         /// </summary>

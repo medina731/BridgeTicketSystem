@@ -12,6 +12,10 @@ namespace Bridge
     /// </summary>
     public class Car : VehicleBase
     {
+        public Car(string licensePlate) : base(licensePlate)
+        {
+        }
+
         /// <summary>
         /// Her er prisen for en bil, som er 300 kr.Metoden skal regne prisen ud for en bil.
         /// Hvis bilen har Brobizz, bliver der givet 10% rabat på deres billet over broen.

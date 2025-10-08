@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bridge</name>
+    </assembly>
+    <members>
+        <member name="T:Bridge.Car">
+            <summary>
+            Det her er Car klassen, som nedarver fra vehicleBase klassen.
+            Klassen representere hvordan at en bil bliver brugt i BroBizz systemet.
+            </summary>
+        </member>
+        <member name="M:Bridge.Car.Price">
+            <summary>
+            Her er prisen for en bil, som er 300 kr.Metoden skal regne prisen ud for en bil.
+            Hvis bilen har Brobizz, bliver der givet 10% rabat på deres billet over broen.
+            Hvis det er weekend (lørdag eller søndag), får bilen 15% rabat på den oprindelige pris, før Brobizz rabatten bliver trukket fra.
+            </summary> 
+            <returns> baseprisen * 0.9 : Baseprisen hvis en bil har Brobizz </returns>
+        </member>
+        <member name="M:Bridge.Car.VehicleType">
+            <summary>
+            Her er VehicleType metoden, som returnere "Car", fordi det er en bil.
+            </summary>
+            <returns>Car</returns>
+        </member>
+        <member name="T:Bridge.MC">
+            <summary>
+            Det her er MC klassen, som nedarver fra vehicleBase klassen.
+            Klassen MC står for Motorcykel , og representere hvordan at en motorcykel bliver brugt i BroBizz systemet.
+            </summary>
+        </member>
+        <member name="M:Bridge.MC.Price">
+            <summary>
+            Her er prisen for en motorcykel, som er 120 kr.Metoden skal regne prisen ud for en motorcykel.
+            </summary>
+            <returns> Den returnere prisen for en MC</returns>
+        </member>
+        <member name="M:Bridge.MC.VehicleType">
+            <summary>
+            Her er Vehicletype metoden, som returnere type for et vehicle som en string 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Bridge.VehicleBase">
+            <summary>
+            Det her er VehicleBase klassen, som er en abstrakt klasse.
+            Baseklassen indeholder shared properties og logik for alle vehicle typer, såsom Licenseplate, Date og Brobizz.
+            </summary>
+        </member>
+        <member name="P:Bridge.VehicleBase.Licenseplate">
+            <summary>
+            Her er Licenseplate property, som er en string.
+            </summary>
+        </member>
+        <member name="P:Bridge.VehicleBase.Date">
+            <summary>
+            Her er Date property, som er en DateTime.
+            </summary>
+        </member>
+        <member name="P:Bridge.VehicleBase.Brobizz">
+            <summary>
+            Her er Brobizz property, som er en bool.
+            </summary>
+        </member>
+        <member name="M:Bridge.VehicleBase.Price">
+            <summary>
+            Her er Price metoden, som er en abstrakt metode.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bridge.VehicleBase.VehicleType">
+            <summary>
+            Her er VehicleType metoden, som er en abstrakt metode.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Bridge.VehicleBase._licenseplate">
+            <summary>
+            Her er LicensePlate, som bruges af licensePLate-Property til validering og adgang.
+            </summary>
+        </member>
+        <member name="M:Bridge.VehicleBase.#ctor(System.String)">
+            <summary>
+            konstruktor for vehiclebase, som kun tager 1 parameter, som er licenseplate.
+            </summary>
+            <param name="licensePlate"></param>
+        </member>
+        <member name="P:Bridge.VehicleBase.LicensePlate">
+            <summary>
+            Her er min licenseplate property med en validering, som sikrer at licenseplaten mindst er 7 karakter lang.
+            </summary>
+        </member>
+        <member name="M:Bridge.VehicleBase.ApplyDiscountForBroBizz(System.Double)">
+            <summary>
+            Her er ApplyDiscountForBroBizz metoden, som tjekker om et vehicle har brobizz, og hvis det har, bliver der givet 10% rabat på prisen.
+            </summary>
+            <param name="price"> Den oprindelig pris før discount</param>
+            <returns> Den nedsatte pris</returns>
+        </member>
+    </members>
+</doc>
