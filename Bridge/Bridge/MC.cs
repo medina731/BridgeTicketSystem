@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bridge
+namespace BridgeStuffModel
 {
     /// <summary>
     /// Det her er MC klassen, som nedarver fra vehicleBase klassen.
@@ -12,6 +12,11 @@ namespace Bridge
     /// </summary>
     public class MC : VehicleBase
     {
+       
+        /// <summary>
+        /// konstruktor for MC, som kun tager 1 parameter, som er licenseplate.
+        /// </summary>
+        /// <param name="licensePlate"></param>
         public MC(string licensePlate) : base(licensePlate)
         {
         }

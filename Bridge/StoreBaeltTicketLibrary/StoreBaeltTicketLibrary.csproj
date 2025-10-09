@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BridgeTest1\BridgeTest1.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Bridge">
       <HintPath>..\..\..\BridgeTicketSystem. DLL&amp;XML\Bridge.dll</HintPath>
     </Reference>

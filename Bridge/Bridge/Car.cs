@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bridge
+namespace BridgeStuffModel
 {
     /// <summary>
     /// Det her er Car klassen, som nedarver fra vehicleBase klassen.
@@ -12,6 +12,12 @@ namespace Bridge
     /// </summary>
     public class Car : VehicleBase
     {
+
+       
+        /// <summary>
+        /// konstruktor for Car, som kun tager 1 parameter, som er licenseplate.
+        /// </summary>
+        /// <param name="licensePlate"></param>
         public Car(string licensePlate) : base(licensePlate)
         {
         }

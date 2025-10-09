@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bridge
+namespace BridgeStuffModel
 {
     /// <summary>
     /// Det her er VehicleBase klassen, som er en abstrakt klasse.
